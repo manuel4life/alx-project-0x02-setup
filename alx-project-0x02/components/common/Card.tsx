@@ -1,5 +1,4 @@
-import { CardProps } from "@/interfaces";
-
+import { CardProps } from "../../interfaces/index";
 const Card: React.FC<CardProps> = ({ title, content }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white p-6 m-4">

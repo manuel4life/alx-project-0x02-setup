@@ -1,3 +1,6 @@
+import Header from "../components/layout/Header";
+
+import React from "react";
 const About: React.FC = () => {
   return (
     <div>

@@ -17,13 +17,14 @@ const Users: React.FC<{ users: UserProps[] }> = ({ users }) => (
   </div>
 );
 
-export const getStaticProps: GetStaticProps = async () => ({
-  props: {
-    users: await (
-      await fetch("https://jsonplaceholder.typicode.com/users")
-    ).json(),
-  },
-  revalidate: 60,
-});
+export async function getStaticProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const users = await res.json();
+
+  return {
+    props: { users },
+    revalidate: 60,
+  };
+}
 
 export default Users;

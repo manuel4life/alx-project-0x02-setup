@@ -25,9 +25,12 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
         <h2 id="modal-title" className="text-xl font-bold mb-4">
           Add New Post
         </h2>
-        <form onSubmit={handleSubmit}>
-          {/* ... rest of your form code remains the same ... */}
-        </form>
+        <input
+          type="text"
+          placeholder="Enter your post content"
+          className="border p-2 w-full"
+        />
+        <form onSubmit={handleSubmit}></form>
       </div>
     </div>
   );
